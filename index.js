@@ -62,6 +62,8 @@ var transferQueue = [], // queued fileTransfers
  * Factory function: Create a single instance (based on single FileSystem)
  */
 module.exports = function(options){
+  var CDV_URL_ROOT, CDV_INTERNAL_URL_ROOT;
+  
   /* Promise implementation */
   var Promise = options.Promise || window.Promise;
   if(!Promise) { throw new Error("No Promise library given in options.Promise"); }
